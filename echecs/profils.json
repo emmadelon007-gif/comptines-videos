@@ -1,0 +1,11 @@
+{
+ "attendu": "youpi-karaoke",
+ "profils": [
+  {
+   "profil": "default",
+   "youtube_relie": false,
+   "chaine": null
+  }
+ ],
+ "http": "200"
+}
