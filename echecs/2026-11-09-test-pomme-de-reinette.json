@@ -1,0 +1,10 @@
+{
+ "envoi": {
+  "success": false,
+  "message": "Username not associated with any profile",
+  "http": "400",
+  "curl_erreur": "",
+  "curl_code": 0
+ },
+ "cle_presente": true
+}
