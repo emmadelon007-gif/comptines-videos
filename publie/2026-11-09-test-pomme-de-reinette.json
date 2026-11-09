@@ -1,0 +1,80 @@
+{
+ "status": "completed",
+ "completed": 1,
+ "total": 1,
+ "results": [
+  {
+   "user_email": "korfi.durable@gmail.com",
+   "profile_username": "youpi-karaoke",
+   "platform": "youtube",
+   "media_type": "video",
+   "upload_timestamp": {
+    "$date": "2026-11-09T18:48:34.071Z"
+   },
+   "success": true,
+   "platform_post_id": "wBgaOvUx5UE",
+   "post_url": "Post uploaded as Private. No public URL available.",
+   "error_message": null,
+   "error_signature": null,
+   "error_code": null,
+   "failure_stage": null,
+   "media_size_bytes": 35575293,
+   "post_title": "Pomme de reinette et pomme d'api | Comptine karaoké pour enfants",
+   "post_caption": "Chante avec Reinette et Api ! Comptine traditionnelle française, arrangement original, paroles en karaoké.",
+   "is_async": true,
+   "dashboard": false,
+   "source": "api",
+   "client": "curl",
+   "client_version": "8.18.0",
+   "video_was_transcoded": false,
+   "changes": [],
+   "prevalidation_metadata": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration": 79.134,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "video_codec": "h264",
+    "audio_codec": "aac"
+   },
+   "target_linkedin_page_id": null,
+   "request_id": "youpi-2026-11-09-test-pomme-de-reinette",
+   "request_id_logs": "youpi-2026-11-09-test-pomme-de-reinette",
+   "job_id": "0b342d24a47c4dfb8e71c0af844ad930",
+   "request_total_platforms": 1
+  }
+ ],
+ "external_id": null,
+ "last_update": {
+  "$date": "2026-11-09T18:48:34.071Z"
+ },
+ "request_id": "youpi-2026-11-09-test-pomme-de-reinette",
+ "http": "200",
+ "curl_erreur": "",
+ "curl_code": 0,
+ "envoi": {
+  "success": true,
+  "message": "Upload queued successfully in the durable worker.",
+  "request_id": "youpi-2026-11-09-test-pomme-de-reinette",
+  "total_platforms": 1,
+  "job_id": "0b342d24a47c4dfb8e71c0af844ad930",
+  "http": "200",
+  "curl_erreur": "",
+  "curl_code": 0
+ },
+ "fiche": {
+  "video": "videos/pomme-de-reinette.mp4",
+  "miniature": "videos/pomme-de-reinette.jpg",
+  "titre": "Pomme de reinette et pomme d'api | Comptine karaoké pour enfants",
+  "description": "Chante avec Reinette et Api ! Comptine traditionnelle française, arrangement original, paroles en karaoké.",
+  "tags": [
+   "comptine",
+   "karaoké",
+   "pomme de reinette",
+   "chanson pour enfants"
+  ],
+  "visibilite": "private",
+  "categorie": "1",
+  "essai": 4
+ }
+}
