@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """Envoie sur YouTube, via Upload-Post, chaque fiche de a_publier/ pas encore traitée. Lancé par GitHub Actions."""
 import glob, json, os, subprocess, sys, time
-KEY = os.environ['UPLOAD_POST_API_KEY']
+KEY = os.environ.get('UPLOAD_POST_API_KEY', '').strip()
 PROFIL = 'youpi-karaoke'
 def curl(*a):
-    r = subprocess.run(['curl', '-sS', '--max-time', '900', '-H', f'Authorization: Apikey {KEY}', *a], capture_output=True, text=True)
-    if r.returncode: raise RuntimeError(r.stderr[:500])
-    return json.loads(r.stdout)
+    r = subprocess.run(['curl', '-sS', '--max-time', '900', '-w', '\n%{http_code}', '-H', f'Authorization: Apikey {KEY}', *a], capture_output=True, text=True)
+    corps, _, code = r.stdout.rpartition('\n')
+    try:
+        d = json.loads(corps)
+        if not isinstance(d, dict): d = {'reponse': d}
+    except ValueError:
+        d = {'reponse_brute': corps[:2000]}
+    d['http'] = code; d['curl_erreur'] = r.stderr[:500]; d['curl_code'] = r.returncode
+    return d
 echec = False
 os.makedirs('publie', exist_ok=True)
 for fiche in sorted(glob.glob('a_publier/*.json')):
@@ -21,15 +27,21 @@ for fiche in sorted(glob.glob('a_publier/*.json')):
             '-F', f"categoryId={j.get('categorie', '1')}", '-F', 'async_upload=true', '-F', f'request_id={rid}']
     for t in j.get('tags', []): args += ['-F', f'tags[]={t}']
     rep = curl(*args); print(nom, json.dumps(rep, ensure_ascii=False)[:800])
-    rid = rep.get('request_id', rid); etat = {}
+    if rep['http'] not in ('200', '201', '202'):
+        os.makedirs('echecs', exist_ok=True)
+        json.dump({'envoi': rep, 'cle_presente': bool(KEY)}, open(os.path.join('echecs', nom), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+        echec = True; continue
+    rid = rep.get('request_id', rid); etat = {'envoi': rep}
     for _ in range(90):
         time.sleep(20)
-        etat = curl(f'https://api.upload-post.com/api/uploadposts/status?request_id={rid}')
+        etat = dict(curl(f'https://api.upload-post.com/api/uploadposts/status?request_id={rid}'), envoi=rep)
         if etat.get('status') in ('completed', 'failed', 'not_found'): break
     etat['fiche'] = j
-    json.dump(etat, open(sortie, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     res = [r for r in etat.get('results', []) if r.get('platform') == 'youtube']
     ok = etat.get('status') == 'completed' and res and res[0].get('success')
+    dest = sortie if ok else os.path.join('echecs', nom)
+    os.makedirs('echecs', exist_ok=True)
+    json.dump(etat, open(dest, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print(nom, 'OK' if ok else 'ÉCHEC', json.dumps(res, ensure_ascii=False)[:800])
     echec = echec or not ok
 sys.exit(1 if echec else 0)
