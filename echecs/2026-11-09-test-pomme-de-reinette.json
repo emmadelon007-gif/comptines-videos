@@ -1,0 +1,10 @@
+{
+ "envoi": {
+  "success": false,
+  "message": "Invalid API key",
+  "http": "401",
+  "curl_erreur": "",
+  "curl_code": 0
+ },
+ "cle_presente": false
+}
