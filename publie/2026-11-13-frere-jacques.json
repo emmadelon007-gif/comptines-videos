@@ -1,0 +1,79 @@
+{
+ "status": "completed",
+ "completed": 1,
+ "total": 1,
+ "results": [
+  {
+   "user_email": "korfi.durable@gmail.com",
+   "profile_username": "youpi-karaoke",
+   "platform": "youtube",
+   "media_type": "video",
+   "upload_timestamp": {
+    "$date": "2026-11-13T11:00:39.667Z"
+   },
+   "success": true,
+   "platform_post_id": "HVZuDo_3Kp0",
+   "post_url": "https://www.youtube.com/watch?v=HVZuDo_3Kp0",
+   "error_message": null,
+   "error_signature": null,
+   "error_code": null,
+   "failure_stage": null,
+   "media_size_bytes": 30511803,
+   "post_title": "Frère Jacques | Comptine karaoké pour enfants",
+   "post_caption": "Chante avec Lili, Tiou et Jacques le hérisson dans la forêt d'automne ! Comptine traditionnelle française, paroles en karaoké, version instrumentale avec un arrangement original. Le couplet est chanté trois fois, avec un passage en canon à trois cloches.",
+   "is_async": true,
+   "dashboard": false,
+   "source": "api",
+   "client": "curl",
+   "client_version": "8.18.0",
+   "video_was_transcoded": false,
+   "changes": [],
+   "prevalidation_metadata": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration": 98.6,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "video_codec": "h264",
+    "audio_codec": "aac"
+   },
+   "target_linkedin_page_id": null,
+   "request_id": "youpi-2026-11-13-frere-jacques",
+   "request_id_logs": "youpi-2026-11-13-frere-jacques",
+   "job_id": "df090e2e6c394270989e7868f61a1e1c",
+   "request_total_platforms": 1
+  }
+ ],
+ "external_id": null,
+ "last_update": {
+  "$date": "2026-11-13T11:00:39.667Z"
+ },
+ "request_id": "youpi-2026-11-13-frere-jacques",
+ "http": "200",
+ "curl_erreur": "",
+ "curl_code": 0,
+ "envoi": {
+  "success": true,
+  "message": "Upload queued successfully in the durable worker.",
+  "request_id": "youpi-2026-11-13-frere-jacques",
+  "total_platforms": 1,
+  "job_id": "df090e2e6c394270989e7868f61a1e1c",
+  "http": "200",
+  "curl_erreur": "",
+  "curl_code": 0
+ },
+ "fiche": {
+  "video": "videos/frere-jacques.mp4",
+  "miniature": "videos/frere-jacques.jpg",
+  "titre": "Frère Jacques | Comptine karaoké pour enfants",
+  "description": "Chante avec Lili, Tiou et Jacques le hérisson dans la forêt d'automne ! Comptine traditionnelle française, paroles en karaoké, version instrumentale avec un arrangement original. Le couplet est chanté trois fois, avec un passage en canon à trois cloches.",
+  "tags": [
+   "comptine",
+   "karaoké",
+   "frère jacques",
+   "chanson pour enfants"
+  ],
+  "visibilite": "public",
+  "categorie": "1"
+ }
+}
