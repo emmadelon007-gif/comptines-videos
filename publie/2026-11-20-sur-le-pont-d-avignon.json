@@ -1,0 +1,84 @@
+{
+ "status": "completed",
+ "completed": 1,
+ "total": 1,
+ "results": [
+  {
+   "user_email": "korfi.durable@gmail.com",
+   "profile_username": "youpi-karaoke",
+   "platform": "youtube",
+   "media_type": "video",
+   "upload_timestamp": {
+    "$date": "2026-11-20T10:41:13.081Z"
+   },
+   "success": true,
+   "platform_post_id": "iWdRRqvfbJE",
+   "post_url": "https://www.youtube.com/watch?v=iWdRRqvfbJE",
+   "error_message": null,
+   "error_signature": null,
+   "error_code": null,
+   "failure_stage": null,
+   "media_size_bytes": 29887692,
+   "post_title": "Sur le pont d'Avignon | Comptine karaoké pour enfants",
+   "post_caption": "Danse avec Rosette la cigale, Zélie la grenouille et Firmin le canard sur le vieux pont de pierre, au milieu des lavandes ! Comptine traditionnelle française, paroles du refrain en karaoké, version instrumentale avec un arrangement original. Le refrain est chanté six fois, avec des passages instrumentaux.",
+   "is_async": true,
+   "dashboard": false,
+   "source": "api",
+   "client": "curl",
+   "client_version": "8.18.0",
+   "video_was_transcoded": false,
+   "changes": [],
+   "prevalidation_metadata": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration": 88.315,
+    "container": "mov,mp4,m4a,3gp,3g2,mj2",
+    "video_codec": "h264",
+    "audio_codec": "aac"
+   },
+   "target_linkedin_page_id": null,
+   "thumbnail_set": false,
+   "thumbnail_error": "Cannot set custom thumbnail: Your YouTube account may not be verified or you lack permission. To upload custom thumbnails, verify your account at https://www.youtube.com/verify",
+   "warnings": [
+    "Custom thumbnail was not applied: Cannot set custom thumbnail: Your YouTube account may not be verified or you lack permission. To upload custom thumbnails, verify your account at https://www.youtube.com/verify"
+   ],
+   "request_id": "youpi-2026-11-20-sur-le-pont-d-avignon",
+   "request_id_logs": "youpi-2026-11-20-sur-le-pont-d-avignon",
+   "job_id": "03811490c1ef47aaa6f8996de3718c35",
+   "request_total_platforms": 1
+  }
+ ],
+ "external_id": null,
+ "last_update": {
+  "$date": "2026-11-20T10:41:13.081Z"
+ },
+ "request_id": "youpi-2026-11-20-sur-le-pont-d-avignon",
+ "http": "200",
+ "curl_erreur": "",
+ "curl_code": 0,
+ "envoi": {
+  "success": true,
+  "message": "Upload queued successfully in the durable worker.",
+  "request_id": "youpi-2026-11-20-sur-le-pont-d-avignon",
+  "total_platforms": 1,
+  "job_id": "03811490c1ef47aaa6f8996de3718c35",
+  "http": "200",
+  "curl_erreur": "",
+  "curl_code": 0
+ },
+ "fiche": {
+  "video": "videos/sur-le-pont-d-avignon.mp4",
+  "miniature": "videos/sur-le-pont-d-avignon.jpg",
+  "titre": "Sur le pont d'Avignon | Comptine karaoké pour enfants",
+  "description": "Danse avec Rosette la cigale, Zélie la grenouille et Firmin le canard sur le vieux pont de pierre, au milieu des lavandes ! Comptine traditionnelle française, paroles du refrain en karaoké, version instrumentale avec un arrangement original. Le refrain est chanté six fois, avec des passages instrumentaux.",
+  "tags": [
+   "comptine",
+   "karaoké",
+   "sur le pont d'avignon",
+   "chanson pour enfants"
+  ],
+  "visibilite": "public",
+  "categorie": "1"
+ }
+}
